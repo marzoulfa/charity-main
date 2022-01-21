@@ -1,1 +1,2 @@
-# charity-main
+# charity
+Website for charity organization

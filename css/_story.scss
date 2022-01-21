@@ -1,0 +1,39 @@
+.story{
+    margin-top: 15rem;
+    background-color: $light;
+    padding: 2rem;
+
+
+
+    &__content{
+        padding: 5rem 2rem;
+        display: flex;
+        flex-direction: column;   
+    }
+
+    &__description{
+        // width: 70%;
+       align-self: center;
+       p{
+           max-width: 80%;
+           margin-bottom: 3rem;
+      
+       }
+    }
+
+    &__image{
+        margin: 0 auto;
+
+         
+        img{
+            width: 90%;
+        }
+     
+    }
+}
+
+@media screen and(min-width: 967px) {
+    .story__content{
+        flex-direction: row;
+    }
+}

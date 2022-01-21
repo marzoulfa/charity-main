@@ -1,0 +1,126 @@
+.news{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    &__content{
+        
+        //TODO: this is need to be DRY
+    .icon{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3rem;
+        .fa{
+            font-size: 4rem;
+            color: $primaryColor;
+        }
+        &::before{
+         content: "";
+         height: 0.3rem;
+         width: 4rem;
+         background: $primaryColor;
+         display: inline-block;
+         margin-left: 1rem;
+     }
+     &::after{
+         content: "";
+         height: 0.3rem;
+         width: 4rem;
+         background: $primaryColor;
+         display: inline-block;
+         margin-right: 1rem;
+     }
+    }
+
+    //TODO: get rid of DRY for margin bottom
+    p{
+       
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .news__cards{
+        margin-top: 5rem;
+        
+        .card{
+         
+         position: relative;
+          width: 80%;
+          margin: 0  auto 3rem auto;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 1px 1px 5px 2px #e6e6e6;
+
+        
+         img{
+              width: 100%;
+            }
+        
+          .reactions{
+              
+              position: absolute;
+              background-color: #e49711;
+              color: #fff;
+              bottom: 280px;
+              top: 0;
+              right: 0;
+              z-index: 999;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              align-items: center;
+
+
+              span{
+                display: inline-block;
+                padding: 1rem 2rem;
+                font-weight: 500;
+                .fas{
+                    display: block;
+                    margin-bottom: 0.8rem;
+                    text-align: center;
+                    font-size: 3rem;
+                    cursor: pointer;
+                    transition: transform 0.25s ease-in-out;
+
+                    &:first-child:hover{
+                      
+                        transform: scale(1.4);
+                    }
+                }
+              }
+          }
+
+          &__body{
+              text-align: right;
+              padding: 3rem 1.5rem;
+             
+              p{
+                  width: 100%;
+              }
+              .footer{
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: 3rem 0 1rem 0;
+            }
+          }
+      
+      }
+        
+      @media screen and (min-width: 968px) {
+       display: flex;   
+       flex-wrap: nowrap;
+       gap: 2rem;
+      }
+    }
+
+ }
+
+
+}

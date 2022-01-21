@@ -1,0 +1,43 @@
+.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span{
+        display: inline-block;
+        margin-right: 1rem;
+        .fas{
+            font-size: 2.5rem;
+            color: $lightGray;
+        }
+    }
+    cite{
+        font-size: 2rem;
+        font-weight: 600;
+        color: $lightGray;
+    }
+    //button
+    .btn{
+      
+        border-radius: 1rem;
+    }
+    // .actions .socail-icons .fab
+    .socail-icons  .fab{
+        color: $lightGray;
+        font-size: 2.3rem;
+        cursor: pointer;
+
+        &:hover{
+         color: $primaryColor;
+        }
+        &:not(:first-child){
+            margin-right: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .actions{
+        display: none;
+    }
+}

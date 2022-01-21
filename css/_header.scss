@@ -1,0 +1,89 @@
+header{
+  position: relative;
+    padding: 1rem;
+    
+    background: $darkLim;
+
+    nav{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        span{
+            color: $primaryColor;
+        }
+
+        .collapse{
+            cursor: pointer;
+            display: none;
+            span{
+                display: block;
+                width:3rem;
+                height: 0.2rem;
+                background-color: #fff;
+
+                &:not(:last-child){
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+
+        ul{
+            li{
+                display: inline-block;
+                &:not(:first-child){
+                    margin-right: 2rem;
+                }
+            }
+        }
+
+        a{
+            color: #fff;
+            font-size: 1.4rem;
+            transition: color 300ms ease-in-out;
+
+            &:hover{
+                color: $primaryColor;
+            }
+        }
+    }
+
+    
+}
+@media screen and (max-width: 768px) {
+ header nav  .collapse{
+        display: block;
+    }
+
+    header nav .menu-links{
+        position: absolute;
+        top: 40px;
+        right: -100%;
+        left: 0;
+        width: 100%;
+        padding: 2rem 0;
+        text-align: center;
+        background-color: #4d6e68;
+        opacity: 0;
+        z-index: 999;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+    header nav .menu-links.open{
+        opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    right: 0;
+    }
+    header nav .menu-links li{
+        display: block;
+        margin: 1rem 0;
+    }
+
+    header nav ul li:not(:first-child){
+        margin-right: unset;
+    }
+
+}

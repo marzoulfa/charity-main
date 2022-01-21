@@ -1,0 +1,112 @@
+.hero{
+    background: $lightGray;
+    // background-image: url('../img/hero.jpg');
+    background-image: linear-gradient(154.54deg, rgba(15, 20, 15, 0.521) 99.5%, rgba(141, 134, 134, 0)),
+    url('../img/hero2.png') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 100%;
+    margin-bottom: 4rem;
+
+    
+    &__content{
+        height: 50vh;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    
+      text-align: center;
+
+      h1{
+          max-width: 80%;
+          margin: 0 auto;
+          color: #fff;
+          line-height: 3.5rem;
+      }
+
+      .btn{
+          font-size: 1.5rem;
+         
+          opacity: 0.95;
+          transition: all 300ms ease-in-out;
+          
+          &:hover::after{
+              display: inline-block;
+            font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f053";
+            margin-right: 2rem;
+          }
+      }
+
+    }
+
+
+
+}
+//Hero intro
+.hero__intro{
+    width: 70%;
+
+    display: flex;
+  //   flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+//    margin-top: -10rem;
+//    margin-bottom: 2rem;
+   margin: -10rem  auto 2rem;
+    
+    span{
+        display: block;
+
+        &.title{
+            font-size: 2.3rem;
+            margin-bottom: 1rem;
+        }
+        &.description{
+            color: $veryLightGray;
+            font-size: 1.4rem;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .fa{
+            font-size: 4rem;
+            color: $primaryColor;
+            margin-bottom: 1rem;
+
+           
+        }
+    }
+
+    .card{
+        padding: 3rem 0;
+        background: rgb(255, 255, 255);
+        margin: 0 0.5rem;
+        cursor: pointer;
+       box-shadow: 1px 1px 3px #9e9e9e;
+       overflow: hidden;
+       transition: all 0.25s ease-in-out;
+
+       &:hover{
+         transform: scale(1.05);
+         margin-top: -2rem;
+       }
+    }
+}
+
+@media screen and (min-width: 968px) {
+    h1{
+        font-size: 3.2rem;
+    }
+
+    
+}
+
+@media screen and (max-width:968px) {
+    .hero__intro{
+        flex-direction: column;
+    }
+}

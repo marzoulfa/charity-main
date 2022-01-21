@@ -1,0 +1,22 @@
+.callToAction{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image:linear-gradient(to left,rgba(255, 255, 255, 0.863), #fffffff3) ,url('../img/action.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2{
+        font-size: 4rem;
+        line-height: 2;
+    }
+
+    h3{
+        font-size: 2.8rem;
+        color: $primaryColor;
+        line-height: 2.5;
+    }
+}

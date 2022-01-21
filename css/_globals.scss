@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "NotoKufiArabic";
+    src: url("../NotoKufiArabic-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "NotoKufiArabic";
+    src: url("../NotoKufiArabic-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "NotoKufiArabic";
+    font-size: 1.7rem;
+    line-height: 1.5;
+   
+    color: $veryLightGray;
+}
+
+h1,h2,h3,h4{
+    color: $lightGray;
+    font-weight: bold;
+    line-height: 2rem;
+}
+h1{
+    font-size: 2.2rem;
+}
+h2{
+    font-size: 3rem;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+.container{
+    
+    max-width: 1333px;
+    margin: 0 auto;
+
+    &--px{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    &--py{
+        padding-bottom: 2.25rem; 
+        padding-top: 5.25rem;
+
+    }
+}
+
+.btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 1.4rem 3rem;
+}
+.btn__primary{
+    background: $primaryColor;
+    color: #fff;
+}

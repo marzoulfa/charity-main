@@ -1,0 +1,108 @@
+.volunteers{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    &__content{
+       
+        //TODO: this is need to be DRY
+       .icon{
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           align-items: center;
+           margin-bottom: 3rem;
+           .fa{
+               font-size: 4rem;
+               color: $primaryColor;
+           }
+           &::before{
+            content: "";
+            height: 0.3rem;
+            width: 4rem;
+            background: $primaryColor;
+            display: inline-block;
+            margin-left: 1rem;
+        }
+        &::after{
+            content: "";
+            height: 0.3rem;
+            width: 4rem;
+            background: $primaryColor;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+       }
+    }
+
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;      
+        gap: 2rem;
+        
+        margin: 4rem 0;
+       
+        .volunteer{
+           cursor: pointer;
+            width: 70%;
+            background-color: #fff;
+            border: 1px solid #ff9800;
+            border-bottom-left-radius: 50%;
+            transition: transform, border-bottom-left-radius 0.25s ease-in-out;
+            &:hover{
+                // transform: scale(1.05);
+                border-bottom-left-radius: unset;
+            }
+  
+            img{
+                width: 100%; 
+                object-fit: cover;
+                max-height: 250px;
+                object-fit: cover;
+               
+            }
+
+            &__body{
+                padding: 2rem 0;
+                blockquote{
+         
+                    &::before{
+                        content: " \" ";
+                        font-size: 4rem;
+                        color: $primaryColor;
+                        font-weight: bold;
+                    }
+                    &::after{
+                        content: " \" ";
+                        font-size: 4rem;
+                        color: $primaryColor;
+                        font-weight: bold;
+                    }
+                }
+                span{
+                    display: block;
+                   
+                }
+
+                .author{
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                  }
+
+                  .occupation{
+                      margin: 1rem 0;
+                      font-size: 1.6rem;
+                  }
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 968px) {
+    .volunteers__cards{
+        flex-direction: row;
+    }
+}
